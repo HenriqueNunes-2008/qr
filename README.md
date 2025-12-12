@@ -28,6 +28,7 @@ Esse repositório organiza os arquivos de forma simples, com código em Python e
 ---
 
 ## 📁 Estrutura do Repositório
+A estrutura principal é:
 qr/
 ├── .devcontainer/ ← Configurações de desenvolvimento (opcional)
 ├── Registro_qr/ ← Código principal para gerar/registrar QR
@@ -72,5 +73,3 @@ python Registro_qr/main.py
 
 
 Esse comando pode gerar um QR Code e registrar suas informações conforme a lógica implementada.
-A estrutura principal é:
-
