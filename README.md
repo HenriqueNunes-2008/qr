@@ -32,7 +32,6 @@ A estrutura principal é:
 qr/
 ├── .devcontainer/ ← Configurações de desenvolvimento (opcional)
 ├── Registro_qr/ ← Código principal para gerar/registrar QR
-├── Procfile ← Deployment (ex: Heroku)
 ├── requirements.txt ← Dependências Python
 └── README.md ← Este arquivo
 
