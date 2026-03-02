@@ -1,6 +1,6 @@
-# 📱 Projeto QR
+#  Projeto QR
 
-Um projeto para **geração e registro de QR Codes** desenvolvido como parte de estudos e aplicações práticas.  
+Um projeto para geração e registro de QR Codes desenvolvido como parte de estudos e aplicações práticas, com persistência de dados em nuvem.
 
 Este repositório contém ferramentas e scripts que permitem gerar QR Codes e registrar informações relacionadas, facilitando o uso de QR Codes em sistemas de controle e integração com outros módulos.
 
@@ -8,67 +8,64 @@ Este repositório contém ferramentas e scripts que permitem gerar QR Codes e re
 
 ## 📌 Sobre
 
-Este projeto possui funcionalidades para **gerar, registrar e salvar QR Codes**, ideal para aplicações como:
+Este projeto possui funcionalidades para gerar, registrar e salvar QR Codes, ideal para aplicações como:
+* Registro de dados com QR Code
+* Integração com sistemas de leitura automática
+* Automatização de processos por meio de QR Codes
 
-- Registro de dados com QR Code
-- Integração com sistemas de leitura automática
-- Automatização de processos por meio de QR Codes
+Este repositório organiza os arquivos de forma simples, utilizando **Python (Flask)** e integração direta com banco de dados.
 
-Esse repositório organiza os arquivos de forma simples, com código em Python e estrutura voltada para uso prático.
+## 🛠️ Tecnologias e Infraestrutura
 
----
+O projeto utiliza uma arquitetura moderna para garantir que os dados não sejam perdidos e que a aplicação esteja sempre online:
+
+* **Linguagem:** Python 3.12+
+* **Framework Web:** Flask
+* **Banco de Dados:** [Supabase] (PostgreSQL) para armazenamento seguro dos registros.
+* **Hospedagem:** [Render](https://qr-b03y.onrender.com) para deploy contínuo.
+* **Planilhas:** Integração com `openpyxl` para geração de relatórios Excel.
 
 ## 🧠 Funcionalidades
 
-✔️ Geração de QR Codes  
-✔️ Registro das informações  
-✔️ Interface ou scripts para uso direto  
-✔️ Compatível com dependências descritas em `requirements.txt`
-
----
+✔️ Geração dinâmica de QR Codes.
+✔️ Registro automático de informações no **Supabase**.
+✔️ Interface web amigável.
+✔️ Exportação de dados para Excel.
+✔️ Configuração via variáveis de ambiente (Segurança).
 
 ## 📁 Estrutura do Repositório
-A estrutura principal é:
+
+```text
 qr/
-├── .devcontainer/ ← Configurações de desenvolvimento (opcional)
-├── Registro_qr/ ← Código principal para gerar/registrar QR
-├── requirements.txt ← Dependências Python
-└── README.md ← Este arquivo
+├── .devcontainer/    # Configurações de desenvolvimento
+├── Registro_qr/      # Código principal (app.py, templates, etc.)
+├── .gitignore        # Arquivos ignorados pelo Git (como o .env)
+├── requirements.txt  # Dependências Python atualizadas
+└── README.md         # Documentação do projeto
+🔐 Configuração de Segurança
+Este projeto utiliza variáveis de ambiente para proteger credenciais sensíveis.
 
----
+Crie um arquivo chamado .env na raiz do projeto.
 
-## 🧾 Requisitos
+Adicione suas chaves do Supabase:
 
-Antes de rodar o projeto, instale o Python e as bibliotecas abaixo:
-
-```bash
-pip install -r requirements.txt
-As dependências são listadas em requirements.txt.
+Snippet de código
+SUPABASE_URL=seu_link_do_projeto
+SUPABASE_ANON_KEY=sua_chave_api_anonima
+O arquivo .env nunca será enviado para o GitHub por estar listado no .gitignore.
 
 🚀 Como Usar
+1. Instalação
+Clone o repositório e instale as dependências:
 
-Clone o repositório:
-
-git clone https://github.com/HenriqueNunes-2008/qr.git
-
-
-Instale as dependências:
-
+Bash
+git clone [https://github.com/HenriqueNunes-2008/qr.git](https://github.com/HenriqueNunes-2008/qr.git)
+cd qr
 pip install -r requirements.txt
+2. Execução Local
+Certifique-se de que o seu .env está configurado e execute:
 
-
-Execute a aplicação ou script principal:
-
-python path_para_seu_script.py
-
-
-⚠️ Obs: Substitua path_para_seu_script.py pelo arquivo que contém o código principal (ex.: dentro de Registro_qr/).
-
-📦 Exemplos de Uso
-
-Se o script principal está em Registro_qr/main.py:
-
-python Registro_qr/main.py
-
-
-Esse comando pode gerar um QR Code e registrar suas informações conforme a lógica implementada.
+Bash
+python Registro_qr/app.py
+🌐 Deploy no Render
+Ao realizar o deploy no Render, adicione as chaves SUPABASE_URL e SUPABASE_ANON_KEY na seção Environment Variables do painel de controle para que a aplicação funcione corretamente online.
