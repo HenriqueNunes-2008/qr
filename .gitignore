@@ -1,0 +1,15 @@
+# Ambientes virtuais
+venv/
+.venv/
+env/
+
+# Variáveis de ambiente (Segurança!)
+.env
+
+# Arquivos temporários do Python
+__pycache__/
+*.py[cod]
+
+# Arquivos de dados locais
+registros.xlsx
+config.json

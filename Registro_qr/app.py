@@ -11,8 +11,8 @@ app = Flask(__name__)
 EXCEL_FILE = "registros.xlsx"
 
 # Supabase configuration
-SUPABASE_URL = "https://jgsqcgkdfbwzodnidbib.supabase.co"
-SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Impnc3FjZ2tkZmJ3em9kbmlkYmliIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjA1MDI3MzMsImV4cCI6MjA3NjA3ODczM30.qk_BzPtVG9MDqrlZ7zb8LZYkD-IZRXRrVm6-TEOKJGk"
+SUPABASE_URL = os.getenv("SUPABASE_URL")
+SUPABASE_ANON_KEY = os.getenv("SUPABASE_ANON_KEY")
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_ANON_KEY)
 
 def load_config():
