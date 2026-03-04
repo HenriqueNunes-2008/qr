@@ -12,4 +12,6 @@ __pycache__/
 
 # Arquivos de dados locais
 registros.xlsx
-config.json
+Registro_qr/employees.json
+Registro_qr/orcamentos.json
+Registro_qr/config.json
