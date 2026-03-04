@@ -1,8 +1,8 @@
 #  Projeto QR
 
-Um projeto para geração e registro de QR Codes desenvolvido como parte de estudos e aplicações práticas, com persistência de dados em nuvem.
+Um projeto para geração de QR Codes e registro de horas trabalhadas desenvolvido para a Fleximedical/Kure.
 
-Este repositório contém ferramentas e scripts que permitem gerar QR Codes e registrar informações relacionadas, facilitando o uso de QR Codes em sistemas de controle e integração com outros módulos.
+Este repositório contém ferramentas e scripts que permitem gerar QR Codes e registrar informações de horas trabalhadas, com persistência em nuvem, facilitando o uso de QR Codes em sistemas de controle e integração com outros módulos.
 
 ---
 
@@ -21,8 +21,8 @@ O projeto utiliza uma arquitetura moderna para garantir que os dados não sejam 
 
 * **Linguagem:** Python 3.12+
 * **Framework Web:** Flask
-* **Banco de Dados:** [Supabase] (PostgreSQL) para armazenamento seguro dos registros.
-* **Hospedagem:** [Render](https://qr-b03y.onrender.com) para deploy contínuo.
+* **Banco de Dados:** Supabase (PostgreSQL) para armazenamento seguro dos registros.
+* **Hospedagem:** Render para deploy contínuo.
 * **Planilhas:** Integração com `openpyxl` para geração de relatórios Excel.
 
 ## 🧠 Funcionalidades
